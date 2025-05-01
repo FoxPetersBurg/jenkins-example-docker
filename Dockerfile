@@ -1,4 +1,4 @@
-FROM openjdk:alpine
+FROM python:alpine
 VOLUME /tmp
 ADD app.jar /app.jar
 RUN sh -c 'touch /app.jar'
