@@ -1,3 +1,3 @@
-FROM node:16-alpine
+FROM openjdk:alpine
 
 RUN apk add -U git curl
