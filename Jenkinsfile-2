@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'node:16-alpine' }
+        docker { image 'openjdk:11-jre-slim' }
       }
       steps {
         sh 'node --version'
