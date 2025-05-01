@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM alpine:3.11
 VOLUME /tmp
 ADD app.jar /app.jar
 RUN sh -c 'touch /app.jar'
