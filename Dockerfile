@@ -1,3 +1,5 @@
-FROM openjdk:alpine
-
-RUN apk add -U git curl
+FROM openjdk:11-jre-slim
+VOLUME /tmp
+ADD app.jar /app.jar
+RUN sh -c 'touch /app.jar'
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]
