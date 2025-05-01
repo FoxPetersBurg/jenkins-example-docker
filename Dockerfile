@@ -1,2 +1,3 @@
 FROM openjdk:11-jre-slim
-RUN apk add -U git curl
+
+RUN apt-get update && apt-get install -y git curl
